@@ -75,6 +75,7 @@ if recommended_movie_trailers:
     for i in range(5):
         with cols[i]:
             if recommended_movie_trailers[i]:
-                st.video(recommended_movie_trailers[i])
+                trailer_link = recommended_movie_trailers[i]
+                st.markdown(f"[🎬 Watch Trailer]({trailer_link})", unsafe_allow_html=True)
             else:
-                st.write("No trailer available")
+                st.write("No trailer available") 
